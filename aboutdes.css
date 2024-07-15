@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.btn-outline {
+    border: 2px solid #68A168;
+    padding: 5px;
+}
+
+.header img {
+    width: 280px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: larger;
+    color: #68A168;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.aboutbanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('images/basic.ss-about-banner.jpg');
+    background-color: rgba(255, 255, 255, 0.8); 
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.aboutbanner p {
+    text-align: left;
+    letter-spacing: 4px;
+    line-height: 2; 
+    font-size: larger;
+    padding-right: 30em; 
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #68A168;
+}
+
+.footer img {
+    width: 15%;
+    height: auto;
+}
+
+.offcanvas-body a {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #68A168;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.offcanvas-body a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #68A168;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation a {
+        margin: 5px 0;
+    }
+
+    .aboutbanner {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .aboutbanner p {
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: medium;
+        padding-right: 0;
+    }
+
+    .footer img {
+        width: 30%;
+    }
+}
